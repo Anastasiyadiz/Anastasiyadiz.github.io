@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Элементы формы (HTML5)</title>
+   
+    <style>
+            
+        .form-html5 {
+            background-color: rgba(255, 255, 255, 0.47);
+            background-image: linear-gradient(to top, rgba(232, 147, 147, 0.58), rgba(153, 229, 153, 0.62));
+            
+/*            width: 50%;*/
+            max-width: 400px;            
+            
+            border: 10px solid rgba(3, 155, 14, 0.49);
+            border-radius: 10px;
+            
+            margin-left: auto;
+            margin-right: auto;
+            
+            padding: 15px;
+        }
+        
+        .form-group {
+            line-height: 180%;
+        }
+        
+        .lbl-header {
+            font-size: 12px;
+            font-weight: bold;
+            font-family:  "verdana", sans-serif;
+            
+            color: rgba(66, 66, 239, 0.83);
+            text-transform: uppercase;
+        }
+        
+        .lbl {
+            color: #034d22;
+            font-style: italic;
+        }
+        
+        .btn {
+            margin-top: 15px;
+            margin-bottom: 20px;
+            padding: 7px 15px;
+            
+            border: none;
+            
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1.3px;
+            color: white;
+            text-transform: uppercase;
+            
+            box-shadow: 1px 2px 3px 0 rgba(77, 96, 83, 0.53);
+            
+            transition: transform 500ms;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+            /* scale(1.4) rotate(45deg)  skew(10deg)  translate(50px)           */
+            
+            cursor: pointer;
+            color: #c6f725;
+        }
+        
+        .btn-reset {
+            background-color: rgba(216, 35, 35, 0.87);
+            margin-right: 15px;
+        }
+        
+        .btn-submit {
+            background-color: rgba(22, 110, 230, 0.78);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <form action="#" method="post" class="form-html5">
+
+        <div class="form-group">
+            <label for="login" class="lbl-header">Логин: </label>
+            <input type="text" id="login" class="inpt">
+        </div>
+
+        <div class="form-group">
+            <label for="pswd" class="lbl-header">Пароль: </label>
+            <input type="password" id="pswd" class="inpt">
+        </div>
+
+
+        <div class="form-group">
+            <label class="lbl-header">Пол: </label>
+        </div>
+        
+        <div class="form-group">
+            <input type="radio" id="m" checked name="sex">
+            <label class="lbl" for="m">Муж </label>
+
+            <input type="radio" id="w" name="sex">
+            <label class="lbl" for="w">Жен </label>
+        </div>
+
+
+        <div class="form-group">
+            <label class="lbl-header">Хобби: </label>
+        </div>
+        
+        <div class="form-group">
+            <label class="lbl" for="football">Футбол </label>
+            <input type="checkbox" id="football" name="hobbi">
+
+            <label class="lbl" for="volleyball">Воллейбол </label>
+            <input type="checkbox" id="volleyball" name="hobbi" checked>
+
+            <label class="lbl" for="basketball">Баскетбол </label>
+            <input type="checkbox" id="basketball" name="hobbi">
+        </div>
+
+        <div class="form-group">
+            <input class="btn btn-reset" type="reset" value="Очистить">
+            <button class="btn btn-submit" type="submit">Отправить</button>
+        </div>
+    </form>
+
+</body>
+
+</html>
